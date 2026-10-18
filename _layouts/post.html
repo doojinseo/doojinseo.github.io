@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post">
+  <a class="back" href="{{ '/' | relative_url }}">← All notes</a>
+  <header class="post-header">
+    <p class="eyebrow">{{ page.category | default: 'Notes' | escape }} <span aria-hidden="true">/</span> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  <div class="post-end"><span aria-hidden="true">✳</span><a href="{{ '/' | relative_url }}">Back to the notebook ↑</a></div>
+  {% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More notes">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
+  </nav>
+  {% endif %}
+</article>

@@ -1,0 +1,24 @@
+title: "#random-doo"
+description: "Personal notes, ideas, and random discoveries."
+url: "https://doojinseo.github.io"
+baseurl: ""
+author: "Doo"
+timezone: Asia/Seoul
+markdown: kramdown
+permalink: /notes/:title/
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
