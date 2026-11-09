@@ -1,45 +1,22 @@
 # #random-doo
 
-A minimal personal notebook at https://doojinseo.github.io.
+Personal blog: https://doojinseo.github.io
 
-## Publish
+## Current deployment
 
-In Settings → Pages, choose **Deploy from a branch**, **main**, **/(root)**, and Save.
-GitHub Pages builds this Jekyll site automatically when changes are committed.
+The homepage is the reviewed v13 DP-inspired interface, with records, trainer card, log, and a local draft editor. `index.html` is self-contained (fonts and thumbnail assets included). Jekyll front matter disables the inherited layout for this page; the rest of the existing Jekyll site is preserved.
 
-## Write a post
+**The editor saves only in the current browser. It does not publish to GitHub.** Drafts, photos and locally saved posts are not shared across devices. Use the export button to keep a copy. The seven built-in records are explicitly labeled examples. Comments and owner-authenticated publishing are not connected yet.
 
-Create a file in `_posts/` named `YYYY-MM-DD-your-title.md`:
+Spotify and YouTube previews require the external service; playback can be restricted by the service.
 
-```markdown
----
-title: "Your title"
-description: "A short introduction shown on the home page."
-category: "Notes"
----
+## Deploy and restore
 
-Write your post in Markdown here.
-```
+GitHub Pages builds `main` from the repository root. The previous public site is preserved on `backup/before-v13-2026-11-10` and in Git history. Revert the v13 deployment commit to restore it.
 
-Use today's date or a past date. Future posts are hidden until the site is rebuilt after their date.
-Edit or remove the clearly marked starter post when you're ready.
+The local editable source and earlier mockup versions remain in `C:/Users/Jinseo/random-doo-preview` and were not uploaded. Editing `_posts/` still creates legacy Jekyll post pages; the new homepage does not yet load those posts automatically.
 
-## Customize
+## Assets
 
-- Blog title, description, and address: `_config.yml`
-- About page: `about.md`
-- Homepage: `index.html`
-- Colors, spacing, and typography: `assets/style.css`
-
-If you change your GitHub username, rename the repository to `NEW-USERNAME.github.io`, update `url` in `_config.yml`, and update the GitHub links in the layout and about page.
-
-## Local preview (optional)
-
-With Ruby and Bundler installed:
-
-```sh
-bundle install
-bundle exec jekyll serve
-```
-
-Open http://localhost:4000.
+DungGeunMo font: https://github.com/Dalgona/DungGeunMo (SIL Open Font License 1.1).
+Pok?mon is owned by its respective rights holders; this personal fan interface is unofficial.
